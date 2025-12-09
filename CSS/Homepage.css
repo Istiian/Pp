@@ -1,0 +1,185 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary:#2C2C2C;
+    --secondary:#5CCF5C;
+    --text:#F5F5F5;
+    --accent:#FFC107;
+    --font:"Expletus Sans";
+}
+/* Navigation */
+
+body{
+    background: url("../PortfolioBg.png");
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+[class*="nav-link"]{
+    color: var(--accent);
+    font-family: var(--font);
+    font-size: 20px;
+    
+}
+[class*="nav-link"]:hover{
+    color: var(--text);
+}
+.fa-bars:hover{
+    color: var(--text);
+}
+
+.title{
+    font-size: 35px;
+    font-family: var(--font);
+    color: var(--accent);
+    text-decoration: none;
+    font-family: var(--font);
+    font-weight: bold;
+}
+.nav-item:nth-child(1) .nav-link { 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 20px;
+}
+
+.HeadingContainer{
+    max-width: 800px;
+    margin-top: 150px;
+}
+.HeadingContainer h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: var(--font);
+    color: var(--text);
+    margin-bottom: 10px;
+
+}
+.HeadingContainer p{
+    text-align: center;
+    font-size: 25px;
+    font-family: var(--font);
+    color: var(--text);
+}
+.IconButtonContainer{
+    max-width: 900px;
+    margin-top: 80px;
+    display:flex;
+}
+.IconButtonContainer button{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    font-family: var(--font);
+    margin-top: 18px;
+    transition: 0.5s ease;
+    font-weight: bold;
+
+}
+.IconButtonContainer button:hover{
+    scale: 95%;
+
+}    
+
+.IconContainer h3{
+    color: var(--text);
+    font-size: 18px;
+}
+.IconContainer ul{
+    display: flex;
+    
+}
+.IconContainer ul li{
+    text-decoration: none;
+    list-style: none;
+    margin-inline: 15px;
+}
+.IconContainer ul li a i{
+    font-size: 40px;
+    color: var(--text);
+    transition: 0.3s ease;
+}
+
+.fa-brands:hover{
+    scale: 110%;
+}
+
+/* SCROLL ANIMATION  */
+.hide{
+    transform: translateY(200px);
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.hide.show{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+footer{
+    width: 100%;
+    background-color:#2F3A2F;
+    position: relative;
+    bottom: 0px;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.FooterContainer{
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.FooterContainer a{
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s ease ;
+}
+.LinkContainer a:hover{
+    color: var(--secondary);
+}
+.LinkContainer{
+    display: flex;
+    flex-direction: column;
+}
+.FooterContainer p{
+    font-size: 16px;
+    display: block;
+    color: var(--text);
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+}
+.FooterContainer ul li{
+    display: block;
+}
+.FooterIcons a i{
+    font-size: 25px;
+    margin-inline: 5px;
+    transition: 0.3s ease;
+}
+
+@media only screen and (max-width: 500px) {
+    .IconButtonContainer{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    
+}

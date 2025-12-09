@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 1px solid black;">
+        <h1>number 1</h1>
+        <label for="1st Number">1st Number</label> <br>
+    <input type="number" class="Inputs"><br>
+
+    <label for="2nd Number">2nd Number</label><br>
+    <input type="number" class="Inputs"><br>
+
+    <label for="3rd Number">3rd Number</label><br>
+    <input type="number" class="Inputs"><br>
+
+    <label for="4th Number">4th Number</label><br>
+    <input type="number" class="Inputs"><br>
+
+    <label for="5th Number">5th Number</label><br>
+    <input type="number" class="Inputs"><br>
+
+    <button id="Button">Calculate</button>
+    <p id="output"></p>
+    </div>
+    <div style="border: 1px solid black;">
+        <h1>number 2</h1>
+        <p id="Text" style="font-size: 25px;">Text</p>
+        <button onclick="Increase()">Increase</button>
+        <button onclick="Decrease()">Decrease</button>
+    </div>
+</body>
+    <script>
+        const Btn = document.getElementById('Button');
+        const Inputs = document.querySelectorAll('.Inputs');
+        const output = document.getElementById('output')
+
+        Btn.addEventListener('click', function(){
+            const first = parseFloat(Inputs[0].value);
+            const second = parseFloat(Inputs[1].value);
+            const third = parseFloat(Inputs[2].value);
+            const fourth = parseFloat(Inputs[3].value);
+            const fifth = parseFloat(Inputs[4].value);
+
+            var final = parseFloat(((first * second) / third) + fourth - fifth);
+            output.textContent = final;
+
+console.log(final);
+
+            
+            
+        });
+
+        const text = document.getElementById('Text');
+        var FontSize = 12;
+        
+        function Increase(){
+            FontSize++;
+            text.style.fontSize = `${FontSize}px`
+        }
+        function Decrease(){
+            FontSize--;
+            text.style.fontSize = `${FontSize}px`
+        }
+    </script>
+</html>
